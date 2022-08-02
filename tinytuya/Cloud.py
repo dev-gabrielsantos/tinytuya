@@ -328,7 +328,7 @@ class Cloud(object):
                 ERR_PARAMS,
                 "Missing DeviceID and Command Parameters"
             )
-        uri = 'iot-03/devices/%s/commands' % (deviceid)
+        uri = 'devices/%s/commands' % (deviceid)
         response_dict = self._tuyaplatform(uri,action='POST',post=commands)
 
         if not response_dict['success']:
